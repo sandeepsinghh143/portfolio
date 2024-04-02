@@ -193,7 +193,7 @@ export const Bio = {
         "NEXT JS",
         "TAILWIND",
       ],
-      github: "https://github.com/sandeepsinghh143/GradientGenerator",
+      github: "https://github.com/sandeepsinghh143/portfolio",
       webapp: "https://sandeepsinghh143.github.io/GradientGenerator/"
     },
     {
