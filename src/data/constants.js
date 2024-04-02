@@ -194,7 +194,7 @@ export const Bio = {
         "TAILWIND",
       ],
       github: "https://github.com/sandeepsinghh143/portfolio",
-      webapp: "https://sandeepsinghh143.github.io/GradientGenerator/"
+      webapp: "https://portfolio-eta-vert-24.vercel.app/"
     },
     {
       id: 1,
