@@ -2,32 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --animate-delay: 2s;
+  --animate-duration: 2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.resume-btn{
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+}
+
+form, .my-box, .resume-btn, .my-project, .my-image, .project-btn, .my-edu{
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+}
+/* width
+::-webkit-scrollbar {
+    width: 4px;
+    height: 80px;
   }
+  
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    background:#222A35;
+  } */
+  
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb {
+    background: #575C66;
+    border-radius: 6px;
+  } */
+  
+  /* Handle on hover */
+  /* ::-webkit-scrollbar-thumb:hover {
+    background: #626970;
+  } */
+
+  .my-input:focus{
+    border: 1px solid #e90a0a !important;
+  }
+
+  .submit-btn{
+    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    cursor: pointer;
+  }
+  .image:after {
+    content:'\A';
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.image:hover:after {
+    opacity:1;
+    border-radius: 0.75rem;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-link:hover{
+  border-bottom: 4px solid red;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.active{
+  border-bottom: 4px solid rgb(255, 0, 0);
+  color: rgb(255, 217, 0);
+  scale:1.3;
+}
+
+
+/* mobile nav css */
+
+.hamburger{
+  width: 30px;
+  height: 3px;
+  background: #d677ba;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+  .hamburger::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #d677ba;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-10px);
+  }
+
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #d677ba;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(10px);
+  }
+
+
+
+.activeHamburger{
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  transform: translateX(-50px); 
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+}
+  .activeHamburger::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #d677ba;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .activeHamburger::after {
+    content:'';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background:#d677ba;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+.sidenav {
+  top:0px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, #b1bfd8 0%, #667eaa 74%);
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.activeSidenav{
+  top:0px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, #b1bfd8 0%, #667eaa 74%);
+  transform: translateX(60%);
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:768px){
+  .activeSidenav{
+    transform: translateX(50%);
   }
 }
