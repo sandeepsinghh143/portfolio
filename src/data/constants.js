@@ -24,7 +24,7 @@ import myntra from "/public/images/myntra.png";
 import blinkit from "/public/images/blinkit.png";
 import chatApp from "/public/images/chatApp.png";
 import portfolio from "/public/images/portfolio.png";
-
+import crypto from "/public/images/crypto.png"
 
 export const Bio = {
     name: "Sandeep Singh",
@@ -198,6 +198,22 @@ export const Bio = {
     },
     {
       id: 1,
+      title: "Crypto Tracker",
+      description:
+        "This app is used to track crypto information in real time. In dashboard information about 100 coins are shown in grid and list form. It also features compare compare page to compare any two coins.",
+      image:crypto,
+      tags: [
+        "HTML",
+        "CSS",
+        "REACT JS",
+        "NEXT JS",
+        "TAILWIND",
+      ],
+      github: "https://github.com/sandeepsinghh143/crypto-tracker",
+      webapp: "https://track-crypto.vercel.app/"
+    },
+    {
+      id: 2,
       title: "Gradient Generator",
       description:
         "Using Gradient Generator you can generate css property gradient background i.e linear gradient to right. After that just copy it and apply it to your preferred html element.",
@@ -211,7 +227,7 @@ export const Bio = {
       webapp: "https://sandeepsinghh143.github.io/GradientGenerator/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Myntra Clone",
       description:"This is fully responsive clone of famous e-commerce website myntra. It features multiple carousal with product images. Responsive hamburger menu for mobile screens.",
       image:myntra,
@@ -220,7 +236,7 @@ export const Bio = {
       webapp: "https://sandeepsinghh143.github.io/myntra-clone/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Blink-It",
       description:"This is fully responsive clone of famous e-commerce website Blinkit. Responsive hamburger menu for mobile screens.",
       image:blinkit,
@@ -230,7 +246,7 @@ export const Bio = {
     },
     
     {
-      id: 4,
+      id: 5,
       title: "Chat App",
       description:"In this chat app user can interact with each other. It uses socket.io to emit messages",
       image:chatApp,
